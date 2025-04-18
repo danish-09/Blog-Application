@@ -52,10 +52,9 @@ This project is open-source and available under the MIT License.
  - Clone the repository
  - Navigate to project directory
  - Install dependencies
- - Start server using `node index.js`
- - Open browser and navigate to `http://localhost:3000/`
-
- - Setup Google OAuth by using google cloud console set authorised javascript origin to set `http://localhost:3000`, authorized redirect url to `http://localhost:3000/auth/google/posts`
+ - Setup Google OAuth
+   - authorised javascript=`http://localhost:3000`
+   - authorized redirect url to `http://localhost:3000/auth/google/posts`
  - PostgreSQL database setup: Make sure your database has following tables
    - CREATE TABLE users (id SERIAL PRIMARY KEY, email VARCHAR(255) UNIQUE NOT NULL, password_hash TEXT);
    - CREATE TABLE posts (id SERIAL PRIMARY KEY, user_id INTEGER REFERENCES users(id) ON DELETE CASCADE, blog_title TEXT NOT NULL, blog_content TEXT NOT NULL);
@@ -68,6 +67,8 @@ This project is open-source and available under the MIT License.
    - SESSION_SECRET=your_session_secret_key
    - GOOGLE_CLIENT_ID=your_google_oauth_client_id
    - GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret
+ - Start server using `node index.js`
+ - Open browser and navigate to `http://localhost:3000/`
 
 
 ## Contributions
