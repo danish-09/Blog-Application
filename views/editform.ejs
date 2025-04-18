@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <h2>Edit Blog</h2>
+    <form action="/edited" method="post">
+        <label for="option">Choose an option:</label>
+        <select id="option" name="option">
+            <option value="edit">edit</option>
+            <option value="delete">delete</option>
+        </select>
+
+        <label for="id">Input id of the blogpost:</label>
+        <input type="text" id="id" name="id" required>
+
+        <button type="submit">Choose Post</button>
+    </form>
+    <br>
+    <br>
+
+    <% if(locals.content) { %>
+    <form action="/editdone" method="post">
+        <textarea style="display: none;" name="id"><%=locals.id%></textarea>
+        <textarea name="editedtitle"><%=locals.title%></textarea>
+        <textarea name="editedcontent"><%=locals.content%></textarea>
+        <button type="submit">Edit complete!</button>
+
+    </form>
+    <% } %>
+    
+    
+</body>
+</html>

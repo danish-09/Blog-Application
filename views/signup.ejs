@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <h2>SignUp</h2>
+    <form action="/signup" method="post">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">SignUp</button>
+        <p>Already have an account, <a href="/signin">SignIn</a></p>
+    </form>
+    <div class="google-auth">
+        <button><a href="/auth/google">Sign Up with google</a></button>
+    </div>
+</body>
+</html>

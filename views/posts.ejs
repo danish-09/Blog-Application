@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <h2>All Blogs</h2>
+    <button><a href="/index">Submit Blog</a></button>
+    <button><a href="/edit">Edit/delete Posts</a></button>
+    <button><a href="/signout">Logout</a></button>
+    <hr>
+    
+    <% if (posts) { %>
+        <% for (let i=0; i<locals.posts.length; i++) { %>
+
+        <h2><%= posts[i]["id"] %>. <%= posts[i]["blog_title"] %></h2>
+        <textarea><%= posts[i]["blog_content"] %></textarea>
+        <p style="margin-top: 0px;"><strong>by <%= posts[i]["email"]%></strong></p>
+    <% }} %>
+    <br>
+    
+</body>
+</html>

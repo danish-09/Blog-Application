@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <header class="header">
+        <h1>My Blog</h1>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="home">
+            <h2>All Posts</h2>
+        </section>
+        <button><a href="/posts">All Posts</a></button>
+
+        <button><a href="/signout">Logout</a></button>
+
+        <!-- Create Post -->
+        <section id="create-post" class="create-post">
+            <h2>Create New Post</h2>
+            <form id="post-form" action="/create" method="POST">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" required></textarea>
+
+                <button type="submit">Create Post</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Danish's Blog Application 2025 ® All rights reserved</p>
+    </footer>
+</body>
+</html>
+
