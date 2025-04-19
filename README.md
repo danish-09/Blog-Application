@@ -56,8 +56,8 @@ This project is open-source and available under the MIT License.
    - authorised javascript=`http://localhost:3000`
    - authorized redirect url to `http://localhost:3000/auth/google/posts`
  - PostgreSQL database setup: Make sure your database has following tables
-   - CREATE TABLE users (id SERIAL PRIMARY KEY, email VARCHAR(255) UNIQUE NOT NULL, password_hash TEXT);
-   - CREATE TABLE posts (id SERIAL PRIMARY KEY, user_id INTEGER REFERENCES users(id) ON DELETE CASCADE, blog_title TEXT NOT NULL, blog_content TEXT NOT NULL);
+   - `CREATE TABLE users (id SERIAL PRIMARY KEY, email VARCHAR(255) UNIQUE NOT NULL, password_hash TEXT);`
+   - `CREATE TABLE posts (id SERIAL PRIMARY KEY, user_id INTEGER REFERENCES users(id) ON DELETE CASCADE, blog_title TEXT NOT NULL, blog_content TEXT NOT NULL);`
  - Create an .env file in root directory with the following variables
    - PG_USER=your_postgres_username
    - PG_HOST=your_postgres_host
