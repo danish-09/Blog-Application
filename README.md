@@ -1,4 +1,4 @@
-# 📝 Blog Application (Full-Stack)
+# 📝 Blog Application 
 
 A full-stack blog application built using **Node.js**, **Express**, **PostgreSQL**, **Passport.js**, and **EJS** templating. 
 This app enables users to sign up, sign in, create blogs, logout and view blogs from all users.
