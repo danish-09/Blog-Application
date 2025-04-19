@@ -60,14 +60,14 @@ This project is open-source and available under the MIT License.
    - `CREATE TABLE users (id SERIAL PRIMARY KEY, email VARCHAR(255) UNIQUE NOT NULL, password_hash TEXT);`
    - `CREATE TABLE posts (id SERIAL PRIMARY KEY, user_id INTEGER REFERENCES users(id) ON DELETE CASCADE, blog_title TEXT NOT NULL, blog_content TEXT NOT NULL);`
  - Create an .env file in root directory with the following variables
-   - PG_USER=your_postgres_username
-   - PG_HOST=your_postgres_host
-   - PG_DATABASE=your_database_name
-   - PG_PASSWORD=your_postgres_password
-   - PG_PORT=5432
-   - SESSION_SECRET=your_session_secret_key
-   - GOOGLE_CLIENT_ID=your_google_oauth_client_id
-   - GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret
+   - `PG_USER=your_postgres_username`
+   - `PG_HOST=your_postgres_host`
+   - `PG_DATABASE=your_database_name`
+   - `PG_PASSWORD=your_postgres_password`
+   - `PG_PORT=5432`
+   - `SESSION_SECRET=your_session_secret_key`
+   - `GOOGLE_CLIENT_ID=your_google_oauth_client_id`
+   - `GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret`
  - Start server using `node index.js`
  - Open browser and navigate to `http://localhost:3000/`
 
